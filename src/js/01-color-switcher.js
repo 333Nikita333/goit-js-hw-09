@@ -9,10 +9,6 @@ let timerId = null;
 refs.btnStartEl.addEventListener('click', onStart);
 refs.btnStopEl.addEventListener('click', onStop);
 
-function getRandomHexColor() {
-    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  }
-
 function onStart() {
   timerId = setInterval(() => {
     refs.bodyEl.style.backgroundColor = getRandomHexColor();
@@ -23,6 +19,10 @@ function onStart() {
 function onStop() {
   clearInterval(timerId);
   switcherBtn();
+}
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
 function switcherBtn() {
