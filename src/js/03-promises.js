@@ -16,9 +16,7 @@ function onClickBtnCreatePromise(e) {
 
   fulfilledOrRejectPromises(dataInput);
 
-  refs.formEl.elements.delay.value = '';
-  refs.formEl.elements.step.value = '';
-  refs.formEl.elements.amount.value = '';
+  refs.formEl.reset();
 }
 
 function fulfilledOrRejectPromises({ delay, step, amount }) {
